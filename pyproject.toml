@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stacked-venv"
+version = "0.1.0"
+description = "Layered Python virtual environments using .pth files"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+  { name = "Devanshu Singla", email = "devanshu.singla@gmail.com" }
+]
+
+[project.scripts]
+stacked-venv = "stacked_venv.cli:main"
+
+[tool.stacked_venv]
+ai_assisted = true
+acknowledgement = "ChatGPT (OpenAI)"
+
+[tool.setuptools]
+packages = ["stacked_venv"]
