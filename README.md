@@ -1,12 +1,12 @@
-# stacked-venv
+# Modenv
 
-🌐 Layered Python virtual environments using `.pth` files — reuse heavy packages across multiple nested projects while keeping full isolation.
+🌐 Modular Python virtual environments using `.pth` files — reuse heavy packages across multiple nested projects while keeping full isolation.
 
 ---
 
-## 📦 What is stacked-venv?
+## 📦 What is modenv?
 
-`stacked-venv` is a Python utility that lets you **chain virtual environments**, so a child `.venv` can reuse site-packages from:
+`modenv` is a Python utility that lets you **chain virtual environments**, so a child `.venv` can reuse site-packages from:
 
 - 🧠 a **parent virtual environment**
 - 👤 the user's `~/.local` Python site-packages
@@ -25,8 +25,8 @@ This allows you to:
 Clone and install using `pip` in editable mode:
 
 ```bash
-git clone https://github.com/devanshusingla/stacked-venv.git
-cd stacked-venv
+git clone https://github.com/devanshusingla/modenv.git
+cd modenv
 pip install -e .
 ```
 
@@ -41,7 +41,7 @@ python -m venv .venv\
 ### Step 2: Stack packages into it
 
 ```bash
-stacked-venv stack .venv
+modenv stack .venv
 ```
 
 ## 🙏 Acknowledgments
