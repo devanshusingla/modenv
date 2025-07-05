@@ -7,7 +7,7 @@ name = "modenv"
 version = "0.1.0"
 description = "Modular Python virtual environments using .pth files"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 license = "MIT"
 authors = [
   { name = "Devanshu Singla", email = "devanshu.singla@gmail.com" }
