@@ -1,49 +1,34 @@
-# Modenv
+# modenv
 
-🌐 Modular Python virtual environments using `.pth` files — reuse heavy packages across multiple nested projects while keeping full isolation.
+**modenv** is a Python CLI tool for managing layered virtual environments using `.pth` file linking. It allows multiple Python projects to share base environments while layering custom dependencies on top.
 
----
+## 🚀 Features
+- Share base dependencies across many projects
+- Use `.modenv` to store layered config per Python version
+- Link parents and children like an overlay filesystem
+- Export/import setup using `spec` command
+- Diagnose and fix broken links with `doctor`
 
-## 📦 What is modenv?
+## 📦 Install
+See [Installation Guide](./docs/installation.md)
 
-`modenv` is a Python utility that lets you **chain virtual environments**, so a child `.venv` can reuse site-packages from:
-
-- 🧠 a **parent virtual environment**
-- 👤 the user's `~/.local` Python site-packages
-
-This allows you to:
-
-- Avoid redundant installations (e.g., `torch`, `transformers`)
-- Save storage in disk-heavy AI projects
-- Keep clean, isolated environments for each project
-- Override stacked packages with per-project installs if needed
-
----
-
-## 🚀 Installation
-
-Clone and install using `pip` in editable mode:
-
+## 🛠 Usage
 ```bash
-git clone https://github.com/devanshusingla/modenv.git
-cd modenv
-pip install -e .
+modenv layer init
+modenv layer parent add /path/to/base --name base --priority 1
 ```
 
-## ⚙️ Usage
+## 📚 Docs
+- [Project Structure](./docs/structure.md)
+- [CLI Usage](./docs/usage.md)
+- [Commands Reference](./docs/commands/layer.md)
 
-### Step 1: Create a virtual environment
+## 🐍 Requirements
+- Python >= 3.11
+- `tomli_w` (installed automatically)
 
-```bash
-python -m venv .venv\
-```
+## 📜 License
+MIT
 
-### Step 2: Stack packages into it
-
-```bash
-modenv stack .venv
-```
-
-## 🙏 Acknowledgments
+## Acknowledgments
 Thanks ChatGPT for helping out with this.
-
